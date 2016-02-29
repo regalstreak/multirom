@@ -17,17 +17,17 @@ fail()
 
 mv ${SCRIPT_PATH}/updater-script ${SCRIPT_PATH}/updater-script-base || fail "Failed to copy updater-script base"
 
-assert_str="assert("
-for dev in $DEVICES; do
-    for prop in $CHECK_PROPS; do
-        assert_str="${assert_str}getprop(\"$prop\") == \"$dev\" || "
-    done
-    assert_str="${assert_str}\n       "
-done
+# assert_str="assert("
+# for dev in $DEVICES; do
+#     for prop in $CHECK_PROPS; do
+#         assert_str="${assert_str}getprop(\"$prop\") == \"$dev\" || "
+#     done
+#     assert_str="${assert_str}\n       "
+# done
 
-assert_str="${assert_str% || \\n *});\n"
+# assert_str="${assert_str% || \\n *});\n"
 
-printf "$assert_str" > ${SCRIPT_PATH}/updater-script || fail "Failed to write assert line into updater-script!"
+# printf "$assert_str" > ${SCRIPT_PATH}/updater-script || fail "Failed to write assert line into updater-script!"
 
 echo "" >> ${SCRIPT_PATH}/updater-script
 echo "ui_print(\"$TITLE $DEVICES\");" >> ${SCRIPT_PATH}/updater-script
