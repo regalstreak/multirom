@@ -16,7 +16,7 @@
  */
 
 #include <unistd.h>
-
+#include <stdlib.h>
 #include "progressdots.h"
 #include "colors.h"
 #include "workers.h"

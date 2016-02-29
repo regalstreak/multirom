@@ -15,7 +15,7 @@
  */
 
 #include <stdlib.h>
-
+#include <string.h>
 #include "containers.h"
 #include "util.h"
 
